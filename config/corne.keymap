@@ -26,31 +26,5 @@
                                         &out OUT_BLE    &kp SPACE       &to NAV         &to NUMBER              &to SYMBOL      &none
                         >;
                 };
-                symbol {
-                        bindings = <
-   &trans       &kp AT             &kp DLLR         &kp LPAR                &kp RPAR        &kp PRCNT           &kp EXCL &kp QMARK         &kp PLUS          &kp STAR            &kp CARET      &trans
-   &trans       &mt LWIN APOS      &mt LALT SLASH   &mt LCTRL LBKT          &mt LSHFT RBKT  &kp DQT             &kp AMPS &mt LSHFT EQUAL   &mt LCTRL MINUS   &mt LALT BACKSLASH  &mt LWIN GRAVE &trans
-   &kp TILDE    &kp UNDERSCORE     &kp LBRC         &kp RBRC                &kp HASH                                     &kp PIPE          &none   &kp LT    &kp GT              &kp COLON      &trans
-                          	   &trans           &to DEFAULT             &trans                              &trans   &trans            &trans
-                        >;
-                };
-
-                number {
-                        bindings = <
-   &trans &none        &kp N7           &kp N8          &kp N9         &none            &none   &kp F7        &kp F8        &kp F9        &kp F10       &trans
-   &trans &mt LWIN N0  &mt LALT N4      &mt LCTRL N5    &mt LSHFT N6   &kp DOT          &none   &mt LSHFT F4  &mt LCTRL F5  &mt LALT F6   &mt LWIN F11  &trans
-   &trans &none        &kp N1           &kp N2          &kp N3         &kp COMMA        &none   &kp F1        &kp F2        &kp F3        &kp F12       &trans
-                          	        &trans          &to DEFAULT    &trans           &trans  &trans        &trans
-                        >;
-                };
-
-                nav {
-                        bindings = <
-&caps_word &kp C_PREV &kp C_PLAY_PAUSE &kp C_NEXT  &kp C_MUTE    &none          &kp PAGE_UP &kp UP   &kp PAGE_DOWN &kp PAUSE_BREAK &trans
-&trans     &kp LWIN   &kp LALT         &kp LCTRL   &kp LSHFT     &kp C_VOL_UP   &none       &kp LEFT &kp DOWN      &kp RIGHT &kp K_APP &trans
-&trans     &none      &none            &none       &none         &kp C_VOL_DN   &none       &kp HOME &kp END       &kp back &none &none &trans
-                          	       &trans      &to DEFAULT   &trans         &trans      &trans   &trans
-                        >;
-                };
         };
 };
