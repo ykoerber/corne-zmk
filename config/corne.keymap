@@ -43,5 +43,14 @@
                           	        &trans          &to DEFAULT    &trans           &trans  &trans        &trans
                         >;
                 };
+
+                nav {
+                        bindings = <
+&caps_word &kp C_PREV &kp C_PLAY_PAUSE &kp C_NEXT  &kp C_MUTE    &none          &trans      &kp PAGE_UP &kp UP   &kp PAGE_DOWN &kp PAUSE_BREAK &trans
+&trans     &kp LWIN   &kp LALT         &kp LCTRL   &kp LSHFT     &kp C_VOL_UP   &none       &kp LEFT &kp DOWN      &kp RIGHT       &kp K_APP &trans
+&trans     &none      &none            &none       &none         &kp C_VOL_DN   &none       &kp HOME &kp END       &none           &none     &trans
+                          	       &trans      &to DEFAULT   &trans         &trans      &trans   &trans
+                        >;
+                };
         };
 };
