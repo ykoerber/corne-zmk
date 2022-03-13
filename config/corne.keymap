@@ -26,5 +26,15 @@
                                         &out OUT_BLE    &kp SPACE       &to NAV         &to NUMBER              &to SYMBOL      &none
                         >;
                 };
+                symbol {
+                        bindings = <
+   &trans       &kp AT             &kp DLLR         &kp LPAR                &kp RPAR        &kp PRCNT           &kp EXCL &kp QMARK         &kp PLUS          &kp STAR            &kp CARET      &trans
+   &trans       &mt LWIN APOS      &mt LALT SLASH   &mt LCTRL LBKT          &mt LSHFT RBKT  &kp DQT             &kp AMPS &mt LSHFT EQUAL   &mt LCTRL MINUS   &mt LALT BACKSLASH  &mt LWIN GRAVE &trans
+   &kp TILDE    &kp UNDERSCORE     &kp LBRC         &kp RBRC                &kp HASH                                     &kp PIPE          &none   &kp LT    &kp GT              &kp COLON      &trans
+                          	   &trans           &to DEFAULT             &trans                              &trans   &trans            &trans
+                        >;
+                };
+
+
         };
 };
