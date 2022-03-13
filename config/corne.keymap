@@ -35,6 +35,13 @@
                         >;
                 };
 
-
+                number {
+                        bindings = <
+   &trans &none        &kp N7           &kp N8          &kp N9         &none            &none   &kp F7        &kp F8        &kp F9        &kp F10       &trans
+   &trans &mt LWIN N0  &mt LALT N4      &mt LCTRL N5    &mt LSHFT N6   &kp DOT          &none   &mt LSHFT F4  &mt LCTRL F5  &mt LALT F6   &mt LWIN F11  &trans
+   &trans &none        &kp N1           &kp N2          &kp N3         &kp COMMA        &none   &kp F1        &kp F2        &kp F3        &kp F12       &trans
+                          	        &trans          &to DEFAULT    &trans           &trans  &trans        &trans
+                        >;
+                };
         };
 };
