@@ -24,32 +24,32 @@
         compatible = "zmk,combos";
         combo_shift_ctrl_r {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <19 20>;
+            key-positions = <18 19>;
             bindings = <&sk LC(LSHFT)>;
         };
         combo_shift_ctrl_l {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <16 17>;
+            key-positions = <15 16>;
             bindings = <&sk LC(LSHFT)>;
         };
         combo_ctrl_l {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <4 5>;
+            key-positions = <3 4>;
             bindings = <&sk LCTRL>;
         };  
         combo_ctrl_r {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <8 9>;
+            key-positions = <7 8>;
             bindings = <&sk LCTRL>;
         };
         combo_shift_alt_l {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <15 17>;
+            key-positions = <14 16>;
             bindings = <&sk LA(LSHFT)>;
         };
         combo_shift_alt_r {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <19 21>;
+            key-positions = <18 20>;
             bindings = <&sk LA(LSHFT)>;
         };  
     };
