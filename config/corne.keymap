@@ -40,12 +40,12 @@
         combo_alt_l {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <2 3>;
-            bindings = <&sk LCTRL>;
+            bindings = <&sk LALT>;
         };  
         combo_alt_r {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <8 9>;
-            bindings = <&sk LCTRL>;
+            bindings = <&sk LALT;
         };     
         combo_win_l {
             timeout-ms = <COMBO_TIMEOUT>;
