@@ -17,6 +17,17 @@
 #define INTELLIJ 5
 
 / {
+
+     combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <1 5>;
+            bindings = <&sk LC(LSHFT)>;
+        };
+    };
+
+
     behaviors {
         lh_pht: left_hand_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
