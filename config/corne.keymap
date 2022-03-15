@@ -25,7 +25,7 @@
    &sk LSHFT &kp Q      &kp W           &kp E           &kp R           &kp T           &kp Y &kp U             &kp I           &kp O           &kp P           &sk LSHFT
    &kp BSPC  &mt LWIN A &mt LALT S      &mt LCTRL D     &mt LSHFT F     &kp G           &kp H &mt LSHFT J       &mt LCTRL K     &mt LALT L      &mt LWIN SEMI   &kp RET
    &kp TAB   &kp Z      &kp X           &kp C           &kp V           &kp B           &kp N &kp M             &kp COMMA       &kp DOT         &kp ESC         &kp DEL
-                                        &kp LA(LC(LS(G)))    &kp SPACE       &to NAV         &to NUMBER              &to SYMBOL      &to INTELLIJ
+                                        &kp LG(LA(LC(LS(G))))    &kp SPACE       &to NAV         &to NUMBER              &to SYMBOL      &to INTELLIJ
                         >;
                 };
                 symbol {
