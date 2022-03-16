@@ -113,11 +113,11 @@
         };      
 
         // caps word
-        // combo_caps_word {
-        //     timeout-mx = <COMBO_TIMEOUT>;
-        //     key-positions = <0 11>;
-        //     bindings = <&caps_word>;
-        // };
+        combo_caps_word {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <0 11>;
+            bindings = <&caps_word>;
+        };
     };
 
     behaviors {
