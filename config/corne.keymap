@@ -18,6 +18,11 @@
 
 #define COMBO_TIMEOUT 40
 
+&sk {
+    release-after-ms = <2000>;
+    quick-release;
+};
+
 / {
 
         ///  0  1  2  3  4  5      6  7  8  9 10 11
@@ -129,10 +134,7 @@
     //         tapping-term-ms = <200>;
     //         bindings = <&kp LC(F2)>, <&kp LA(LS(F9))>;
     //     };
-            &sk {
-                release-after-ms = <2000>;
-                quick-release;
-            };
+
     };
         
         keymap {
