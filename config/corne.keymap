@@ -125,7 +125,7 @@
         td_intj_debug: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_INTELLIJ_DEBUG";
-            #binding-cells = <INTELLIJ>;
+            #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LC(F2)>, <&kp LA(LS(F9))>;
         };
