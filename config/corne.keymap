@@ -112,12 +112,12 @@
             bindings = <&kp LG(LA(LC(LS(M))))>;
         };      
 
-        //caps word
-        // combo_caps_word {
-        //     timeout-mx = <COMBO_TIMEOUT>;
-        //     key-positions = <0 11>;
-        //     bindings = <&caps_word>;
-        // };
+        // caps word
+        combo_caps_word {
+            timeout-mx = <COMBO_TIMEOUT>;
+            key-positions = <0 11>;
+            bindings = <&caps_word>;
+        };
     };
 
     behaviors {
@@ -191,7 +191,7 @@
                 intellij {
                         bindings = <
 &none    &kp LC(Q)       &none         &kp LC(F1) &kp LA(LC(LS(T))) &kp LA(F12)          &none       &kp LA(F7) &none      &kp LA(F5)    &kp LA(N1) &none
-&none    &kp LC(LS(S))   &kp LA(N7)    &none &kp LA(LC(L))     &kp LA(INS)          &kp LC(P)   &none      &none      &kp LC(LS(E)) &none &none
+&none    &kp LC(LS(S))   &kp LA(N7)    &td_intj_debug &kp LA(LC(L))     &kp LA(INS)          &kp LC(P)   &none      &none      &kp LC(LS(E)) &none &none
 &none    &kp LA(F1)      &kp LC(LS(R)) &kp LA(N0)  &kp LA(GRAVE)     &kp LS(F11)          &none       &none      &kp LS(F2) &none         &none &none
                                        &trans     &to DEFAULT       &trans               &trans      &trans     &trans
                         >;
