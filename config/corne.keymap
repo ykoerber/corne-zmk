@@ -122,13 +122,13 @@
 
     behaviors {
     //     //intellij start app in debug with one tap. stop it with two taps
-    //     td_intj_debug: tap_dance_0 {
-    //         compatible = "zmk,behavior-tap-dance";
-    //         label = "TAP_DANCE_INTELLIJ_DEBUG";
-    //         #binding-cells = <INTELLIJ>;
-    //         tapping-term-ms = <200>;
-    //         bindings = <&kp LC(F2)>, <&kp LA(LS(F9))>;
-    //     };
+        td_intj_debug: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_INTELLIJ_DEBUG";
+            #binding-cells = <INTELLIJ>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LC(F2)>, <&kp LA(LS(F9))>;
+        };
 
         //sticky keys with quick-release. avoid that the more than key is affected by the sticky key. happens if the first key after the sticky is hold down
         skq: sticky_key_quick_release {
