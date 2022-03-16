@@ -119,16 +119,16 @@
         };
     };
 
-    behaviors {
-        //intellij start app in debug with one tap. stop it with two taps
-        td_intj_debug: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_INTELLIJ_DEBUG";
-            #binding-cells = <INTELLIJ>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LC(F2)>, <&kp LA(LS(F9))>;
-        };
-    };
+    // behaviors {
+    //     //intellij start app in debug with one tap. stop it with two taps
+    //     td_intj_debug: tap_dance_0 {
+    //         compatible = "zmk,behavior-tap-dance";
+    //         label = "TAP_DANCE_INTELLIJ_DEBUG";
+    //         #binding-cells = <INTELLIJ>;
+    //         tapping-term-ms = <200>;
+    //         bindings = <&kp LC(F2)>, <&kp LA(LS(F9))>;
+    //     };
+    // };
         
         keymap {
                 compatible = "zmk,keymap";
@@ -180,7 +180,7 @@
                 intellij {
                         bindings = <
 &none    &kp LC(Q)       &none         &kp LC(F1) &kp LA(LC(LS(T))) &kp LA(F12)          &none       &kp LA(F7) &none      &kp LA(F5)    &kp LA(N1) &none
-&none    &kp LC(LS(S))   &kp LA(N7)    &td_intj_debug &kp LA(LC(L))     &kp LA(INS)          &kp LC(P)   &none      &none      &kp LC(LS(E)) &none &none
+&none    &kp LC(LS(S))   &kp LA(N7)    &none &kp LA(LC(L))     &kp LA(INS)          &kp LC(P)   &none      &none      &kp LC(LS(E)) &none &none
 &none    &kp LA(F1)      &kp LC(LS(R)) &kp LA(N0)  &kp LA(GRAVE)     &kp LS(F11)          &none       &none      &kp LS(F2) &none         &none &none
                                        &trans     &to DEFAULT       &trans               &trans      &trans     &trans
                         >;
