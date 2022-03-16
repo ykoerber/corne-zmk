@@ -49,12 +49,12 @@
         };     
         combo_win_l {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <1 2>;
+            key-positions = <2 4>;
             bindings = <&sk LWIN>;
         };  
         combo_win_r {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <9 10>;
+            key-positions = <7 9>;
             bindings = <&sk LWIN>;
         };  
 
