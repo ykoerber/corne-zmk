@@ -122,7 +122,7 @@
 
     behaviors {
     //     //intellij start app in debug with one tap. stop it with two taps
-        td_intj_debug {
+        td_intj_debug: td_intj_debug {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_INTELLIJ_DEBUG";
             #binding-cells = <0>;
