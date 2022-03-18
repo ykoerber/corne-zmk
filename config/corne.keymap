@@ -30,6 +30,19 @@
 
      combos {
         compatible = "zmk,combos";
+       
+        // win mod
+        combo_win_l {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <13 37>;
+            bindings = <&sk LWIN>;
+        };
+        combo_win_r {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <22 40>;
+            bindings = <&sk LWIN>;
+        };
+        
         // ptt
         combo_ptt {
             timeout-ms = <COMBO_TIMEOUT>;
@@ -56,6 +69,8 @@
             key-positions = <0 11>;
             bindings = <&caps_word>;
         };
+        
+
     };
 
     behaviors {
