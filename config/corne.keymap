@@ -96,7 +96,7 @@
    &skq LSHFT &kp Q  &kp W  &kp E             &kp R            &kp T           &kp Y &kp U             &kp I               &kp O           &kp P           &skq LSHFT
    &kp BSPC  &kp A  &kp S  &kp D   &kp F  &kp G           &kp H &kp J   &kp K     &kp L   &kp SEMI   &kp RET
    &kp TAB   &kp Z  &kp X  &kp C             &kp V            &kp B           &kp N &kp M             &kp COMMA           &kp DOT         &kp ESC         &kp DEL
-                                        &sk LALT    &kp SPACE       &to NAV         &to NUMBER              &to SYMBOL      &sk LCTRL
+                                        &sk LCTRL    &kp SPACE       &to NAV         &to NUMBER              &to SYMBOL      &sk LALT
                         >;
                 };
                 symbol {
@@ -139,7 +139,7 @@
                         bindings = <
 &trans   &kp LC(Q)       &none         &kp LC(F1) &kp LA(LC(LS(T))) &kp LA(F12)          &none       &kp LA(F7) &none      &kp LA(F5)    &kp LA(N1) &trans
 &trans    &kp LC(LS(S))   &kp LA(LC(LS(N2)))    &td_intj_debug &kp LA(LC(L))     &kp LA(INS)          &kp LC(P)   &none      &none      &kp LC(LS(E)) &none &trans
-&trans    &kp LA(LC(LS(N1)))      &kp LC(LS(R)) &kp LA(N0)  &kp LA(GRAVE)     &kp LS(F11)          &kp LC(LS(A))       &td_intj_files      &kp LS(F2) &kp F2         &none &trans
+&trans    &kp LA(LC(LS(N1)))      &kp LC(LS(R)) &kp LC(LS(LA(N3)))  &kp LA(GRAVE)     &kp LS(F11)          &kp LC(LS(A))       &td_intj_files      &kp LS(F2) &kp F2         &none &trans
                                        &trans     &to DEFAULT       &trans               &trans      &trans     &trans
                         >;
                 };
