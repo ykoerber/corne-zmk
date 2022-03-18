@@ -152,7 +152,7 @@
 
                 intellij {
                         bindings = <
-&trans   &kp LC(Q)       &none         &kp LC(F1) &kp LA(LC(LS(T))) &kp LC(LA(F12))          &none       &kp LA(F7) &none      &kp LA(F5)    &kp LA(N1) &trans
+&trans   &kp LC(Q)       &none         &kp LC(F1) &kp LA(LC(LS(T))) &kp LC(LS(LA(F11)))          &none       &kp LA(F7) &none      &kp LA(F5)    &kp LA(N1) &trans
 &trans    &kp LC(LS(S))   &kp LA(LC(LS(N2)))    &td_intj_debug &kp LA(LC(L))     &kp LA(INS)          &kp LC(P)   &none      &none      &kp LC(LS(E)) &none &trans
 &trans    &kp LA(LC(LS(N1)))      &kp LC(LS(R)) &kp LC(LS(LA(N3)))  &kp LA(GRAVE)     &kp LS(F11)          &kp LC(LS(A))       &td_intj_files      &kp LS(F2) &kp F2         &none &trans
                                        &trans     &to DEFAULT       &trans               &trans      &trans     &trans
