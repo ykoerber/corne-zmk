@@ -37,7 +37,7 @@
             bindings = <&kp PTT>;
         };  
         //intellij layer
-        combo_ptt {
+        combo_intellij_layer {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <19 40>;
             bindings = <&to INTELLIJ>;
