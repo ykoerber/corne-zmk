@@ -30,8 +30,7 @@
 
      combos {
         compatible = "zmk,combos";
-       
-        // win mod
+       // single mods
         combo_win_l {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <13 37>;
@@ -42,20 +41,73 @@
             key-positions = <22 40>;
             bindings = <&sk LWIN>;
         };
-        
-        // ptt
-        combo_ptt {
+        combo_ctrl_l {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <16 37>;
-            bindings = <&kp PTT>;
+            key-positions = <15 37>;
+            bindings = <&sk LCTRL>;
         };  
-        //intellij layer
-        combo_intellij_layer {
+        combo_ctrl_r {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <19 40>;
-            bindings = <&to INTELLIJ>;
+            key-positions = <20 40>;
+            bindings = <&sk LCTRL>;
+        };
+        combo_alt_l {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <14 37>;
+            bindings = <&sk LALT>;
+        };  
+        combo_alt_r {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <21 40>;
+            bindings = <&sk LALT>;
+        };     
+
+        //double mods
+        combo_shift_ctrl_r {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <15 16 37>;
+            bindings = <&sk LC(LSHFT)>;
+        };
+        combo_shift_ctrl_l {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <19 20 40>;
+            bindings = <&sk LC(LSHFT)>;
+        };
+        combo_shift_alt_l {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <14 16 37>;
+            bindings = <&sk LA(LSHFT)>;
+        };
+        combo_shift_alt_r {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <19 21 40>;
+            bindings = <&sk LA(LSHFT)>;
+        };  
+        combo_alt_ctrl_l {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <14 15 37>;
+            bindings = <&sk LA(LCTRL)>;
+        };  
+        combo_alt_ctrl_r {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <20 21 40>;
+            bindings = <&sk LA(LCTRL)>;
         };  
 
+
+
+        //triple mods
+        combo_shift_ctrl_alt_l {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <14 15 16 37>;
+            bindings = <&sk LS(LC(LALT))>;
+        };  
+        combo_shift_ctrl_alt_r {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <19 20 21 40>;
+            bindings = <&sk LS(LC(LALT))>;
+        };
+        
         //mute
         combo_mute {
             timeout-ms = <COMBO_TIMEOUT>;
@@ -111,7 +163,7 @@
    &skq LSHFT &kp Q  &kp W  &kp E             &kp R            &kp T           &kp Y &kp U             &kp I               &kp O           &kp P           &skq LSHFT
    &kp BSPC  &kp A  &kp S  &kp D   &kp F  &kp G           &kp H &kp J   &kp K     &kp L   &kp SEMI   &kp RET
    &kp TAB   &kp Z  &kp X  &kp C             &kp V            &kp B           &kp N &kp M             &kp COMMA           &kp DOT         &kp ESC         &kp DEL
-                                        &sk LCTRL    &kp SPACE       &to NAV         &to NUMBER              &to SYMBOL      &sk LALT
+                                        &kp PTT    &kp SPACE       &to NAV         &to NUMBER              &to SYMBOL      &to INTELLIJ
                         >;
                 };
                 symbol {
