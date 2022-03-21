@@ -16,6 +16,9 @@
 #define SETTINGS 4
 #define INTELLIJ 5
 
+//push-to-talk hotkey
+#define PTT LG(LA(LC(LS(G))))
+
 #define COMBO_TIMEOUT 50
 
 / {
@@ -27,67 +30,67 @@
 
      combos {
         compatible = "zmk,combos";
-        // single mods
+       // single mods
+        combo_win_l {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <13 37>;
+            bindings = <&sk LWIN>;
+        };
+        combo_win_r {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <22 40>;
+            bindings = <&sk LWIN>;
+        };
         combo_ctrl_l {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <3 4>;
+            key-positions = <15 37>;
             bindings = <&sk LCTRL>;
         };  
         combo_ctrl_r {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <7 8>;
+            key-positions = <20 40>;
             bindings = <&sk LCTRL>;
         };
         combo_alt_l {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <2 3>;
+            key-positions = <14 37>;
             bindings = <&sk LALT>;
         };  
         combo_alt_r {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <8 9>;
+            key-positions = <21 40>;
             bindings = <&sk LALT>;
         };     
-        combo_win_l {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <2 4>;
-            bindings = <&sk LWIN>;
-        };  
-        combo_win_r {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <7 9>;
-            bindings = <&sk LWIN>;
-        };  
 
         //double mods
         combo_shift_ctrl_r {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <19 20>;
+            key-positions = <15 16 37>;
             bindings = <&sk LC(LSHFT)>;
         };
         combo_shift_ctrl_l {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <15 16>;
+            key-positions = <19 20 40>;
             bindings = <&sk LC(LSHFT)>;
         };
         combo_shift_alt_l {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <14 16>;
+            key-positions = <14 16 37>;
             bindings = <&sk LA(LSHFT)>;
         };
         combo_shift_alt_r {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <19 21>;
+            key-positions = <19 21 40>;
             bindings = <&sk LA(LSHFT)>;
         };  
         combo_alt_ctrl_l {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <14 15>;
+            key-positions = <14 15 37>;
             bindings = <&sk LA(LCTRL)>;
         };  
         combo_alt_ctrl_r {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <20 21>;
+            key-positions = <20 21 40>;
             bindings = <&sk LA(LCTRL)>;
         };  
 
@@ -96,15 +99,15 @@
         //triple mods
         combo_shift_ctrl_alt_l {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <14 15 16>;
+            key-positions = <14 15 16 37>;
             bindings = <&sk LS(LC(LALT))>;
         };  
         combo_shift_ctrl_alt_r {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <19 20 21>;
+            key-positions = <19 20 21 40>;
             bindings = <&sk LS(LC(LALT))>;
-        };           
-
+        };
+        
         //mute
         combo_mute {
             timeout-ms = <COMBO_TIMEOUT>;
@@ -118,10 +121,12 @@
             key-positions = <0 11>;
             bindings = <&caps_word>;
         };
+        
+
     };
 
     behaviors {
-    //     //intellij start app in debug with one tap. stop it with two taps
+    //     //intellij: start app in debug with one tap. stop it with two taps
         td_intj_debug: td_intj_debug {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_INTELLIJ_DEBUG";
@@ -130,7 +135,7 @@
             bindings = <&kp LC(F2)>, <&kp LA(LS(F9))>;
         };
 
-        //intellij tap dance for: open class | open file
+        //intellij: tap dance for: open class | open file
         td_intj_files: td_intj_files {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_INTELLIJ_FILES";
@@ -158,7 +163,7 @@
    &skq LSHFT &kp Q  &kp W  &kp E             &kp R            &kp T           &kp Y &kp U             &kp I               &kp O           &kp P           &skq LSHFT
    &kp BSPC  &kp A  &kp S  &kp D   &kp F  &kp G           &kp H &kp J   &kp K     &kp L   &kp SEMI   &kp RET
    &kp TAB   &kp Z  &kp X  &kp C             &kp V            &kp B           &kp N &kp M             &kp COMMA           &kp DOT         &kp ESC         &kp DEL
-                                        &kp LG(LA(LC(LS(G))))    &kp SPACE       &to NAV         &to NUMBER              &to SYMBOL      &to INTELLIJ
+                                        &kp PTT    &kp SPACE       &to NAV         &to NUMBER              &to SYMBOL      &to INTELLIJ
                         >;
                 };
                 symbol {
@@ -199,9 +204,9 @@
 
                 intellij {
                         bindings = <
-&trans   &kp LC(Q)       &none         &kp LC(F1) &kp LA(LC(LS(T))) &kp LA(F12)          &none       &kp LA(F7) &none      &kp LA(F5)    &kp LA(N1) &trans
-&trans    &kp LC(LS(S))   &kp LA(LC(LS(N2)))    &td_intj_debug &kp LA(LC(L))     &kp LA(INS)          &kp LC(P)   &none      &none      &kp LC(LS(E)) &none &trans
-&trans    &kp LA(LC(LS(N1)))      &kp LC(LS(R)) &kp LA(N0)  &kp LA(GRAVE)     &kp LS(F11)          &kp LC(LS(A))       &td_intj_files      &kp LS(F2) &kp F2         &none &trans
+&trans   &kp LC(Q)       &none         &kp LC(F1) &kp LA(LC(LS(T))) &kp LC(LS(LA(F11)))          &none       &kp LC(LA(F7)) &none      &kp LA(N5)    &kp LA(N1) &trans
+&trans    &kp LC(LS(S))   &kp LA(LC(LS(N2)))    &td_intj_debug &kp LA(LC(L))     &kp LC(LS(LA(G)))          &kp LC(P)   &none      &none      &kp LC(LS(E)) &none &trans
+&trans    &kp LA(LC(LS(N1)))      &kp LC(LS(R)) &kp LC(LS(LA(N3)))  &kp LC(LS(LA(F3)))     &kp LS(F11)          &kp LC(LS(A))       &td_intj_files      &kp LS(F2) &kp F2         &none &trans
                                        &trans     &to DEFAULT       &trans               &trans      &trans     &trans
                         >;
                 };
