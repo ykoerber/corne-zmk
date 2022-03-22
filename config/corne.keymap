@@ -49,7 +49,7 @@
         combo_win {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <36 41>;
-            bindings = <&LWIN>;
+            bindings = <&sk LWIN>;
         };
 
     };
