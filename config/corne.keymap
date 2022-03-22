@@ -46,7 +46,7 @@
         };
         
         // win key
-        combo_caps_word {
+        combo_win {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <36 41>;
             bindings = <&LWIN>;
