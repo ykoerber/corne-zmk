@@ -57,7 +57,7 @@
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <37 40>;
             bindings = <&to INTELLIJ>;
-        }
+        };
     };
 
     behaviors {
