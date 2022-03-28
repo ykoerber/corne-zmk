@@ -19,7 +19,7 @@
 //push-to-talk hotkey
 #define PTT LG(LA(LC(LS(G))))
 
-#define COMBO_TIMEOUT 50
+#define COMBO_TIMEOUT 60
 
 / {
 
@@ -51,7 +51,13 @@
             key-positions = <36 41>;
             bindings = <&sk LWIN>;
         };
-
+        
+        // intellij layer
+        combo_intellij {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <37 40>;
+            bindings = <&to INTELLIJ>;
+        }
     };
 
     behaviors {
@@ -61,7 +67,7 @@
             label = "TAP_DANCE_INTELLIJ_DEBUG";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LC(F2)>, <&kp LA(LS(F9))>;
+            bindings = <&kp LA(LS(F9))>, <&kp LC(F2)>;
         };
 
         //intellij: tap dance for: open class | open file
@@ -122,19 +128,19 @@
 
                 nav {
                         bindings = <
-&trans   &caps_word     &kp C_PREV &kp C_PLAY_PAUSE &kp C_NEXT  &kp C_MUTE          &trans      &kp PAGE_UP &kp UP        &kp PAGE_DOWN   &kp PAUSE_BREAK &trans
-&trans   &kp LWIN       &kp LALT   &kp LCTRL        &kp LSHFT   &kp C_VOL_UP        &none       &kp LEFT    &kp DOWN      &kp RIGHT       &kp K_APP       &trans
-&trans   &to SETTINGS   &kp LC(X)  &kp LC(C)        &kp LC(V)       &kp C_VOL_DN        &none       &kp HOME    &kp END       &none           &to INTELLIJ     &trans
-                               &trans           &to DEFAULT &trans              &trans      &trans   &trans
+&trans   &caps_word     &kp C_PREV &kp C_PLAY_PAUSE &kp C_NEXT  &kp C_MUTE          &trans      &kp PAGE_UP &kp UP        &kp PAGE_DOWN   &kp PAUSE_BREAK  &trans
+&trans   &kp LWIN       &kp LALT   &kp LCTRL        &kp LSHFT   &kp C_VOL_UP        &none       &kp LEFT    &kp DOWN      &kp RIGHT       &kp K_APP        &trans
+&trans   &to SETTINGS   &kp LC(X)  &kp LC(C)        &kp LC(V)   &kp C_VOL_DN        &none       &kp HOME    &kp END       &none           &to INTELLIJ     &trans
+                                   &trans           &to DEFAULT &trans              &trans      &trans      &trans
                         >;
                 };
 
                 bt {
                         bindings = <
 &none    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4            &out OUT_BLE &out OUT_USB &none &none &none &none
-&none    &none        &none        &none         &none         &bt BT_CLR              &none &none &none &none &none &none 
-&none &none &none &none &none &none                                                    &none &none &none &none &none &none
-                               &trans           &to DEFAULT &trans              &trans      &trans   &trans
+&none    &none        &none        &none         &none         &bt BT_CLR              &none        &none        &none &none &none &none 
+&none    &none        &none        &none         &none         &none                   &none        &none        &none &none &none &none
+                                   &trans        &to DEFAULT   &trans                  &trans       &trans       &trans
                         >;
                 };
 
