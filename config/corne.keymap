@@ -17,6 +17,7 @@
 #define FN 5
 #define SETTINGS 6
 #define INTJ 7
+#define CHAR_MODS 8
 
 //push-to-talk hotkey
 #define PTT LG(LA(LC(LS(G))))
@@ -170,6 +171,15 @@
 &trans    &kp LC(LS(S))   &kp LA(LC(LS(N2)))    &td_intj_debug &kp LA(LC(L))     &kp LC(LS(LA(G)))          &kp LC(P)   &none      &none      &kp LC(LS(E)) &none &trans
 &trans    &kp LA(LC(LS(N1)))      &kp LC(LS(R)) &kp LC(LS(LA(N3)))  &kp LC(LS(LA(F3)))     &kp LS(F11)          &kp LC(LS(A))       &td_intj_files      &kp LS(F2) &kp F2         &none &trans
                                        &trans     &trans       &trans               &trans      &trans     &trans
+                        >;
+                };
+
+                char_mods {
+                        bindings = <
+   &trans &kp Q  &kp W  &kp E   &kp R  &kp T                                   &kp Y &kp U   &kp I       &kp O    &kp P            &trans
+   &trans &mt LWIN A  &mt LALT S  &mt LCTRL D   &mt LSHFT F  &kp G             &kp H &mt LSHFT J   &mt LCTRL K       &mt LALT L    &mt LWIN  SEMI   &trans
+   &trans &kp Z  &kp X  &kp C   &kp V  &kp B                                   &kp N &kp M   &kp COMMA   &kp DOT  &trans    &trans
+                &trans        &trans        &trans                  &trans       &trans       &trans
                         >;
                 };
         };
