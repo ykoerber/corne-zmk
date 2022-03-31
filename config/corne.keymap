@@ -105,7 +105,7 @@
                         bindings = <
    &skq LSHFT &kp Q  &kp W  &kp E   &kp R  &kp T             &kp Y &kp U   &kp I       &kp O    &kp P      &skq LSHFT
    &kp BSPC   &kp A  &kp S  &kp D   &kp F  &kp G             &kp H &kp J   &kp K       &kp L    &kp SEMI   &kp RET
-   &kp TAB    &kp Z  &kp X  &kp C   &kp V  &kp B             &kp N &kp M   &kp COMMA   &kp DOT  &kp ESC    &kp DEL
+   &kp TAB    &kp Z  &kp X  &kp C   &kp V  &kp B             &kp N &kp M   &kp COMMA   &kp DOT  &key_repeat    &kp DEL
                   &kp PTT   &lt SYM_R SPACE  &mo NAV         &mo NUM    &lt SYM_L ESC   &sl INTJ
                         >;
                 };
@@ -138,9 +138,9 @@
 
                 nav {
                         bindings = <
-&trans   &caps_word     &kp C_PREV &kp C_PLAY_PAUSE &kp C_NEXT  &kp C_MUTE          &trans      &kp PAGE_UP &kp UP        &kp PAGE_DOWN   &kp PAUSE_BREAK  &trans
+&trans   &caps_word     &kp C_PREV &kp C_PLAY_PAUSE &kp C_NEXT  &kp C_MUTE          &kp LC(Y)      &kp PAGE_UP &kp UP        &kp PAGE_DOWN   &kp PAUSE_BREAK  &trans
 &trans   &kp LWIN       &kp LALT   &kp LCTRL        &kp LSHFT   &kp C_VOL_UP        &none       &kp LEFT    &kp DOWN      &kp RIGHT       &kp K_APP        &trans
-&trans   &none   &kp LC(X)  &kp LC(C)        &kp LC(V)   &kp C_VOL_DN        &none       &kp HOME    &kp END       &none           &none     &trans
+&trans   &kp LC(Z)   &kp LC(X)  &kp LC(C)        &kp LC(V)   &kp C_VOL_DN        &none       &kp HOME    &kp END       &none           &none     &trans
                                    &trans           &trans &trans              &trans      &trans      &trans
                         >;
                 };
