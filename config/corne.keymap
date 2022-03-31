@@ -28,14 +28,19 @@
 
     conditional_layers {        
         compatible = "zmk,conditional-layers";        
-        fn_layer {            
+        char_layer {            
             if-layers = <SYM_L SYM_R>;            
-            then-layer = <FN>;        
+            then-layer = <CHAR_MODS>;        
         };    
 
         settings_layer {            
             if-layers = <NUM NAV>;            
-            then-layer = <SETTINGS>;        
+            then-layer = <SETTINGS>;
+        };    
+
+        fn_layer {            
+            if-layers = <NAV SYM_L>;            
+            then-layer = <FN>;        
         };    
     };
 
