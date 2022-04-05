@@ -28,10 +28,10 @@
 
     conditional_layers {        
         compatible = "zmk,conditional-layers";        
-        char_layer {            
-            if-layers = <SYM_L SYM_R>;            
-            then-layer = <CHAR_MODS>;        
-        };    
+        // char_layer {            
+        //     if-layers = <SYM_L SYM_R>;            
+        //     then-layer = <CHAR_MODS>;        
+        // };    
 
         settings_layer {            
             if-layers = <NUM NAV>;            
@@ -39,7 +39,7 @@
         };    
 
         fn_layer {            
-            if-layers = <NAV SYM_L>;            
+            if-layers = <SYM_L SYM_R>;            
             then-layer = <FN>;        
         };    
     };
@@ -117,27 +117,27 @@
                 };
                 symbol_left {
                         bindings = <
-   &trans   &kp AT    &kp DLLR         &kp LPAR       &kp RPAR  &kp PRCNT       &none &none  &none  &none  &none      &trans
+   &trans   &kp AT     &kp DLLR         &kp LPAR       &kp RPAR  &kp PRCNT        &none &none      &none       &none     &none      &trans
    &trans   &kp APOS   &kp SLASH        &kp LBKT       &kp RBKT  &kp DQT         &none &sk LSHIFT &sk LCTRL   &sk LALT  &sk LWIN   &trans
-   &trans   &kp TILDE  &kp UNDERSCORE   &kp LBRC       &kp RBRC  &kp HASH        &none &none  &none  &none  &none      &trans
-                          	   &trans    &trans   &trans                    &trans    &trans   &trans
+   &trans   &kp TILDE  &kp UNDERSCORE   &kp LBRC       &kp RBRC  &kp HASH        &none &none      &none       &sk RALT  &none      &trans
+                          	                    &trans    &trans &trans        &trans    &trans   &trans
                         >;
                 };
 
                 symbol_right {
                         bindings = <
-   &trans   &none &none  &none  &none  &none                                 &kp EXCL &kp QMARK         &kp PLUS         &kp STAR            &kp CARET      &trans
-   &trans   &sk LWIN    &sk LALT    &sk LCTRL   &sk LSHIFT &trans            &kp AMPS &kp EQUAL   &kp MINUS  &kp BACKSLASH  &kp GRAVE &trans
-   &trans  &none &none  &none  &none  &none                                  &kp PIPE &none      &kp LT           &kp GT              &kp COLON      &trans
-                          	   &trans    &trans      &trans          &trans    &trans   &trans
+   &trans   &none       &none     &none      &none      &none             &kp EXCL  &kp QMARK   &kp PLUS         &kp STAR            &kp CARET      &trans
+   &trans   &sk LWIN    &sk LALT  &sk LCTRL  &sk LSHIFT &trans            &kp AMPS  &kp EQUAL   &kp MINUS  &kp BACKSLASH  &kp GRAVE &trans
+   &trans   &none       &sk RALT  &none      &none  &none                 &kp PIPE  &none       &kp LT           &kp GT              &kp COLON      &trans
+                          	   &trans    &trans      &trans               &trans    &trans      &trans
                         >;
                 };
 
                 number {
                         bindings = <
-   &trans &none        &kp N7           &kp N8   &kp N9 &none          &none &none  &none  &none  &none &trans
-   &trans &kp N0  &kp N4      &kp N5    &kp N6   &kp DOT               &none   &sk LSHIFT &sk LCTRL   &sk LALT  &sk LWIN   &trans
-   &trans &none        &kp N1           &kp N2   &kp N3 &none          &none &none  &none  &none  &none      &trans
+   &trans &none        &kp N7      &kp N8   &kp N9 &none          &none &none  &none  &none  &none &trans
+   &trans &kp N0       &kp N4      &kp N5    &kp N6   &kp DOT               &none   &sk LSHIFT &sk LCTRL   &sk LALT  &sk LWIN   &trans
+   &trans &none        &kp N1      &kp N2   &kp N3 &none          &none &none  &none  &none  &none      &trans
                           	        &trans          &trans    &trans           &trans  &trans        &trans
                         >;
                 };
