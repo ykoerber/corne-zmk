@@ -30,19 +30,15 @@
 
     conditional_layers {        
         compatible = "zmk,conditional-layers";        
-        //char_layer {            
-        //     if-layers = <SYM_L SYM_R>;            
-        //     then-layer = <CHAR_MODS>;        
-        //};    
+        
+        char_layer {            
+            if-layers = <SYM_L SYM_R>;            
+            then-layer = <CHAR_MODS>;        
+        };    
 
         settings_layer {            
             if-layers = <NAV NUM>;            
             then-layer = <SETTINGS>;
-        };    
-
-        fn_layer {            
-            if-layers = <SYM_L SYM_R>;            
-            then-layer = <FN>;        
         };    
     };
 
@@ -106,14 +102,14 @@
                         bindings = <
    &skq LSHFT &kp Q  &kp W  &kp E   &kp R  &kp T             &kp Y &kp U   &kp I       &kp O    &kp P      &skq LSHFT
    &kp BSPC   &kp A  &kp S  &kp D   &kp F  &kp G             &kp H &kp J   &kp K       &kp L    &kp SEMI   &kp RET
-   &kp TAB    &kp Z  &kp X  &kp C   &kp V  &kp B             &kp N &kp M   &kp COMMA   &kp DOT  &key_repeat    &kp DEL
-                  &kp PTT   &lt SYM_R SPACE  &mo NAV         &mo NUM    &lt SYM_L ESC   &sl INTJ
+   &kp TAB    &kp Z  &kp X  &kp C   &kp V  &kp B             &kp N &kp M   &kp COMMA   &kp DOT  &kp LC(SEMI)      &kp DEL
+                  &mo FN   &lt SYM_R SPACE  &mo NAV         &mo NUM    &lt SYM_L ESC   &sl INTJ
                         >;
                 };
                 symbol_left {
                         bindings = <
    &trans   &kp AT     &kp DLLR         &kp LPAR       &kp RPAR  &kp PRCNT        &none &none      &none       &none     &none      &trans
-   &trans   &kp APOS   &kp SLASH        &kp LBKT       &kp RBKT  &kp DQT         &none &sk LSHIFT &sk LCTRL   &sk LALT  &sk LWIN   &trans
+   &trans   &kp APOS   &kp SLASH        &kp LBKT       &kp RBKT  &kp DQT         &none &kp LSHIFT &kp LCTRL   &kp LALT  &kp LWIN   &trans
    &trans   &kp TILDE  &kp UNDERSCORE   &kp LBRC       &kp RBRC  &kp HASH        &none &none      &none       &sk RALT  &none      &trans
                           	                    &trans    &trans &trans        &trans    &trans   &trans
                         >;
@@ -122,8 +118,8 @@
                 symbol_right {
                         bindings = <
    &trans   &none       &none     &none      &none      &none             &kp EXCL  &kp QMARK   &kp PLUS         &kp STAR            &kp CARET      &trans
-   &trans   &sk LWIN    &sk LALT  &sk LCTRL  &sk LSHIFT &trans            &kp AMPS  &kp EQUAL   &kp MINUS  &kp BACKSLASH  &kp GRAVE &trans
-   &trans   &none       &sk RALT  &none      &none  &none                 &kp PIPE  &none       &kp LT           &kp GT              &kp COLON      &trans
+   &trans   &kp LWIN    &kp LALT  &kp LCTRL  &kp LSHIFT &trans            &kp AMPS  &kp EQUAL   &kp MINUS  &kp BACKSLASH  &kp GRAVE &trans
+   &trans   &none       &sk RALT  &none      &kp PTT  &kp MUTE                 &kp PIPE  &none       &kp LT           &kp GT              &kp COLON      &trans
                           	   &trans    &trans      &trans               &trans    &trans      &trans
                         >;
                 };
@@ -131,7 +127,7 @@
                 number {
                         bindings = <
    &trans &none        &kp N7      &kp N8   &kp N9 &none          &none &none  &none  &none  &none &trans
-   &trans &kp N0       &kp N4      &kp N5    &kp N6   &kp DOT               &none   &sk LSHIFT &sk LCTRL   &sk LALT  &sk LWIN   &trans
+   &trans &kp N0       &kp N4      &kp N5    &kp N6   &kp DOT               &none   &kp LSHIFT &kp LCTRL   &kp LALT  &kp LWIN   &trans
    &trans &none        &kp N1      &kp N2   &kp N3 &none          &none &none  &none  &none  &none      &trans
                           	        &trans          &trans    &trans           &trans  &trans        &trans
                         >;
@@ -149,7 +145,7 @@
                 fn {
                         bindings = <
     &trans   &none &none  &none  &none  &none                            &none   &kp F7   &kp F8  &kp F9   &kp F10  &trans
-    &trans   &sk LWIN  &sk LALT &sk LCTRL &sk LSHIFT &trans       &none   &kp F4   &kp F5  &kp F6   &kp F11  &trans
+    &trans   &kp LWIN  &kp LALT &kp LCTRL &kp LSHIFT &trans       &none   &kp F4   &kp F5  &kp F6   &kp F11  &trans
     &trans   &none &none  &none  &none  &none                            &none   &kp F1   &kp F2  &kp F3   &kp F12   &trans
                      &trans  &trans    &trans            &trans  &trans  &trans
                         >;
@@ -178,7 +174,7 @@
                         bindings = <
    &trans &kp Q  &kp W  &kp E   &kp R  &kp T                                   &kp Y &kp U   &kp I       &kp O    &kp P            &trans
    &trans &mt LWIN A  &mt LALT S  &mt LCTRL D   &mt LSHFT F  &kp G             &kp H &mt LSHFT J   &mt LCTRL K       &mt LALT L    &mt LWIN  SEMI   &trans
-   &trans &kp Z  &kp X  &kp C   &kp V  &kp B                                   &kp N &kp M   &kp COMMA   &kp DOT  &trans    &trans
+   &trans &kp Z  &mt RALT X  &kp C   &kp V  &kp B                                   &kp N &kp M   &kp COMMA   &mt RALT DOT  &trans    &trans
                 &trans        &trans        &trans                  &trans       &trans       &trans
                         >;
                 };
