@@ -30,20 +30,16 @@
 
     conditional_layers {        
         compatible = "zmk,conditional-layers";        
+        
         char_layer {            
             if-layers = <SYM_L SYM_R>;            
             then-layer = <CHAR_MODS>;        
         };    
 
         settings_layer {            
-            if-layers = <NUM NAV>;            
+            if-layers = <NAV NUM>;            
             then-layer = <SETTINGS>;
         };    
-
-        // fn_layer {            
-        //     if-layers = <SYM_L SYM_R>;            
-        //     then-layer = <FN>;        
-        // };    
     };
 
         ///  0  1  2  3  4  5      6  7  8  9 10 11
@@ -158,7 +154,7 @@
 
                 settings {
                         bindings = <
-&none    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4            &out OUT_BLE         &out OUT_USB           &none &none &none &none
+&none    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4            &out OUT_BLE         &out OUT_USB           &none &none &none &bootloader
 &none    &none        &none        &none         &none         &bt BT_CLR              &ext_power EP_OFF    &ext_power EP_ON       &none &none &none &none 
 &none    &none        &none        &none         &none         &none                   &none                &none                  &none &none &none &none
                                    &trans        &trans        &trans                  &trans       &trans       &trans
