@@ -23,6 +23,14 @@
 //push-to-talk hotkey
 #define PTT LG(LA(LC(LS(G))))
 #define MUTE LG(LA(LC(LS(M))))
+#define BOOKMARKS LS(F11)
+#define IJ_ACTION LC(LS(A))
+#define IJ_CLASSES LC(LS(K))
+#define IJ_FILES LC(LS(N))
+#define IJ_DEBUG LS(LA(F9))
+#define IJ_RUN LS(LA(F10))
+#define IJ_STOP LC(F2)
+#define ACE_JUMP LC(SEMICOLON)
 
 #define COMBO_TIMEOUT 60
 
@@ -163,9 +171,9 @@
 
                 intellij {
                         bindings = <
-&trans   &kp LC(Q)       &none         &kp LC(F1) &kp LA(LC(LS(T))) &kp LC(LS(LA(F11)))          &none       &kp LC(LA(F7)) &none      &kp LA(N5)    &kp LA(N1) &trans
-&trans    &kp LC(LS(S))   &kp LA(LC(LS(N2)))    &td_intj_debug &kp LA(LC(L))     &kp LC(LS(LA(G)))          &kp LC(P)   &none      &none      &kp LC(LS(E)) &none &trans
-&trans    &kp LA(LC(LS(N1)))      &kp LC(LS(R)) &kp LC(LS(LA(N3)))  &kp LC(LS(LA(F3)))     &kp LS(F11)          &kp LC(LS(A))       &td_intj_files      &kp LS(F2) &kp F2         &none &trans
+&kp IJ_ACTION   &kp LC(Q)       &none         &kp LC(F1) &kp LA(LC(LS(T))) &kp LC(LS(LA(F11)))          &none       &kp LC(LA(F7)) &none      &kp LA(N5)    &kp LA(N1) &kp IJ_RUN
+&kp IJ_CLASSES  &kp LC(LS(S))   &kp LA(LC(LS(N2)))    &td_intj_debug &kp LA(LC(L))     &kp LC(LS(LA(G)))          &kp LC(P)   &none      &none      &kp LC(LS(E)) &none &kp IJ_DEBUG
+&kp IJ_FILES    &kp LA(LC(LS(N1)))      &kp LC(LS(R)) &kp LC(LS(LA(N3)))  &kp LC(LS(LA(F3)))     &kp LS(F11)          &kp LC(LS(A))       &td_intj_files      &kp LS(F2) &kp F2         &none &kp IJ_STOP
                                        &trans     &trans       &trans               &trans      &trans     &trans
                         >;
                 };
