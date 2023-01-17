@@ -19,6 +19,7 @@
 #define SETTINGS 6
 #define INTJ 7
 #define CHAR_MODS 8
+#define UTIL 9
 
 //push-to-talk hotkey
 #define PTT LG(LA(LC(LS(G))))
@@ -110,7 +111,7 @@
                         bindings = <
    &skq LSHFT &kp Q  &kp W  &kp E   &kp R  &kp T             &kp Y &kp U   &kp I       &kp O    &kp P      &skq LSHFT
    &kp BSPC   &kp A  &kp S  &kp D   &kp F  &kp G             &kp H &kp J   &kp K       &kp L    &kp SEMI   &kp RET
-   &kp TAB    &kp Z  &kp X  &kp C   &kp V  &kp B             &kp N &kp M   &kp COMMA   &kp DOT  &kp LC(SEMI)      &kp DEL
+   &kp TAB    &kp Z  &kp X  &kp C   &kp V  &kp B             &kp N &kp M   &kp COMMA   &kp DOT  &sl UTIL      &kp DEL
                   &mo FN   &lt SYM_R SPACE  &mo NAV         &mo NUM    &lt SYM_L ESC   &sl INTJ
                         >;
                 };
@@ -184,6 +185,15 @@
    &trans &mt LWIN A  &mt LALT S  &mt LCTRL D   &mt LSHFT F  &kp G             &kp H &mt LSHFT J   &mt LCTRL K       &mt LALT L    &mt LWIN  SEMI   &trans
    &trans &kp Z  &mt RALT X  &kp C   &kp V  &kp B                                   &kp N &kp M   &kp COMMA   &mt RALT DOT  &trans    &trans
                 &trans        &trans        &trans                  &trans       &trans       &trans
+                        >;
+                };
+                
+                util {
+                        bindings = <
+&none    &none &none &none  &none  &none            &none        &kp RA(Y)            &none &kp RA(P) &none &none 
+&none    &kp RA(Q)        &kp RA(S)        &none         &none         &none               &none     &none        &none &none &none &none 
+&none    &none        &none        &none         &none         &none                   &none                &none                  &none &none &none &none
+                                   &trans        &kp ACE_JUMP        &trans                  &trans       &trans       &trans
                         >;
                 };
         };
